@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Blanka-Regular';
+    src: url("img/BLANKA-Free-Font-ER/BLANKA Font/Blanka-Regular.otf") format('openType');
+    /* Si la fuente es .otf, utiliza "format('opentype')" en lugar de "format('truetype')" */
+  }
+  
+  /* Utiliza la fuente en los elementos deseados */
+  h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 4em;
+    word-wrap: break-word;
+}
+  span {
+    font-family: 'Blanka-Regular', sans-serif;
+    font-size: 2em;
+    font-style: normal;
+
+  }
+
+html,body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #090014;
+    margin: 0em;
+    overflow: hidden;
+   
+  }
+  img{
+    display: inline;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+
+  }
+  
+  .container{
+    margin-top: 0em;
+    margin-bottom: -20em;
+  }
+  .cont {
+    margin-top: -25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .texto {
+    width: 90vw;
+    height: 1em;
+    
+  
+  }
+  
+  h1 {
+    color: #ffffff;
+    font-size: 32px;
+  }
+  
+  
+  svg {
+    transform: scale(.6);
+  }
+
+  
+
+/*Animation Elements*/
+.crane-line-one {}
+.crane-line-two {}
+.crane-knot {}
+
+.star-piece {}
+.star-cut {opacity: 0;}
+.star-shadow {opacity: .35}
+
+.roller {}
+.roller-fold {}
+.roller-fold-shadow {opacity:0.08}
