@@ -10,6 +10,7 @@ body {
     background-color: #121212;
     color: white;
 }
+
 .navbar {
     position: fixed;
     top: 0;
@@ -19,9 +20,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
     background: rgba(52, 52, 52, 0.183);
     transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+    box-sizing: border-box; /* Añadido para incluir padding en el width total */
+
 }
 
 .navbar.hidden {
@@ -37,19 +40,60 @@ body {
     width: auto;
 }
 
-.nav-back {
+.nav-links {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border: 2px solid white;
-    border-radius: 5px;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
+    position: relative;
 }
 
-.nav-back:hover {
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
     background-color: white;
-    color: #121212;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
+
+.nav-links a:hover::after {
+    width: 70%;
+}
+
+/* Marca la página actual */
+.nav-links a.active {
+    font-weight: bold;
+}
+
+.nav-links a.active::after {
+    width: 70%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5em 1em;
+    }
+    
+    .nav-links {
+        gap: 1em;
+    }
+    
+    .nav-links a {
+        padding: 0.5rem;
+    }
+}
+
 
 
 .parallax-container {
