@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #121212;
+    color: white;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(52, 52, 52, 0.183);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.navbar.scrolled {
+    background: rgba(18, 18, 18, 0.5);
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-back {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-back:hover {
+    background-color: white;
+    color: #121212;
+}
+
+
+.parallax-container {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: fixed;
+    font-size: 5rem;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.images-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.image {
+    width: 25vw; /* Responsive width based on viewport width */
+    height: 100vh; /* Height will adjust to maintain aspect ratio */
+    background-size: cover; /* Ensures image is fully visible */
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.left {
+    background-image: url('../img/aleix.JPG');
+}
+
+.right-images {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-right: 2rem;
+}
+
+#img2 {
+    background-image: url('../img/aoife.JPG');
+    transform: translateX(-2vw); /* Responsive offset */
+}
+
+#img3 {
+    background-image: url('../img/tiziano.JPG');
+    transform: translateX(2vw); /* Responsive offset */
+}
+
+
+
+.content {
+    position: relative;
+    width: 100%;
+    margin-top: 400vh;
+    visibility: visible; /* Changed from hidden to visible */
+}
+
+.sticky-image {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.3);
+    transform-origin: center center;
+    transition: transform 0.3s ease-out, 
+                filter 0.5s ease-out;
+}
+.content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.section-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    color: white;
+    opacity: 0;
+    text-align: center;
+    transition: all 0.5s ease;
+    transform: translateY(100vh);    
+}
+
+
+.section-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.member {
+    min-height: 200vh;
+    position: relative;
+    margin-bottom: 5rem;
+    overflow: hidden;
+}
