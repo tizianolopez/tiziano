@@ -3,28 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto - Grupo C3</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <title>Proyecto - BookingChef</title>
+    <link rel="stylesheet" href="css/styles_proyecto.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="proyecto.html">Proyecto</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html">
+                <img src="img/gorro.png" alt="Logo C3">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="proyecto.html">Proyecto</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
 
-    <section class="content">
-        <h1>Sobre nuestro proyecto</h1>
-        <p><strong>BookingChef</strong> es una plataforma web que ayuda a restaurantes a optimizar sus reservas.</p>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>BookingChef</h1>
+            <p class="subtitle">Revolucionando la gestión de restaurantes</p>
+            <div class="hero-image"></div>
+        </section>
 
-    <footer>
-        <p>Copyright &copy; 2024 - Grupo C3 - FHiC</p>
+        <section class="features">
+            <h2>¿Qué ofrecemos?</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="icon">📌</div>
+                    <h3>Interfaz Visual Interactiva</h3>
+                    <p>Representación digital del plano de tu restaurante con mesas interactivas y personalizables.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon">📅</div>
+                    <h3>Gestión en Tiempo Real</h3>
+                    <p>Asigna mesas, gestiona reservas y optimiza el espacio de tu restaurante al instante.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon">🎨</div>
+                    <h3>Diseño Personalizado</h3>
+                    <p>Configura la distribución exacta de tu local, incluyendo zonas especiales y espacios únicos.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Análisis y Optimización</h3>
+                    <p>Estadísticas detalladas sobre el uso de mesas para mejorar la eficiencia del servicio.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>¿Por qué BookingChef?</h2>
+            <div class="benefits-container">
+                <div class="benefit">
+                    <h4>✨ Eficiencia Mejorada</h4>
+                    <p>Reduce errores y optimiza la asignación de mesas</p>
+                </div>
+                <div class="benefit">
+                    <h4>🎯 Experiencia Superior</h4>
+                    <p>Mejora la satisfacción del cliente eliminando esperas innecesarias</p>
+                </div>
+                <div class="benefit">
+                    <h4>🤝 Mejor Comunicación</h4>
+                    <p>Facilita la coordinación entre personal y gerencia</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="target-audience">
+            <h2>Diseñado para</h2>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <h3>Restaurantes PYME</h3>
+                    <p>Solución perfecta para negocios pequeños y medianos</p>
+                </div>
+                <div class="audience-card">
+                    <h3>Cadenas</h3>
+                    <p>Estandarización para múltiples locales</p>
+                </div>
+                <div class="audience-card">
+                    <h3>Alta Rotación</h3>
+                    <p>Ideal para bares y cafeterías</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <footer id="contact">
+        <p>&copy; 2024 BookingChef - Grupo C3</p>
     </footer>
+    <script src="/src/js/navbar.js"></script>
 </body>
 </html>

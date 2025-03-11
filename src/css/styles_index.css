@@ -9,17 +9,34 @@ body {
     justify-content: center;
     align-items: center;
 }
+main{
+    width: 100%;
+}
 
 section{
     margin-bottom: 3em;
 }
+
+.floor-plan-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
 .floor-plan {
     width: 75vw;
     min-height: 75vh;
-    background: #232323;
+    background-image: repeating-conic-gradient(#efefef 0% 25%, #ffffff 0% 50%);
+    background-position: 0 0, 85px 85px;
+    background-size: 170px 170px;
+    background-color: #ffa078;    
     border-radius: 15px;
-    padding: 4rem;
+    padding: 4em 5em 0em;
     position: relative;
+    margin: 0 auto;
+    max-width: 65vw;
 }
 
 /* Contenedor de las mesas */
@@ -285,22 +302,11 @@ section{
     width: 70%;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0.5em 1em;
-    }
-    
-    .nav-links {
-        gap: 1em;
-    }
-    
-    .nav-links a {
-        padding: 0.5rem;
-    }
-}
 
 .hero {
-    min-height: 90vh;
+    height: 100vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(330deg, rgba(0,0,0,1) 66%, rgba(255,133,0,1) 100%);    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -358,7 +364,7 @@ h4 {font-weight: 400;}
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    width: 90%;
     margin: 4rem auto;
 }
 
@@ -366,6 +372,7 @@ h4 {font-weight: 400;}
     flex: 1;
     min-width: 300px;
 }
+
 
 
 .description-wrapper h3 {
@@ -387,12 +394,7 @@ h4 {font-weight: 400;}
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .rotating-text-container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+
 
 .words-wrapper {
     height: 50px;
@@ -404,6 +406,8 @@ h4 {font-weight: 400;}
     display: flex;
     flex-direction: column;
     animation: rotate 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+    text-align: center;
+
 }
 
 .words span {
@@ -433,5 +437,37 @@ h4 {font-weight: 400;}
 }
 
 
+@media (max-width: 768px) {
 
+    .navbar {
+        padding: 0.5em 1em;
+    }
+    
+    .nav-links {
+        gap: 1em;
+    }
+    
+    .nav-links a {
+        padding: 0.5rem;
+    }
+
+
+    .rotating-text-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 6em;
+    }
+    .words span {
+        height: 50px;
+        color: #FF8500;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Add this */
+        width: 100%; /* Add this */
+    
+    }
+    .side-tables-container{
+        justify-content: space-around;
+    }
+}
 
