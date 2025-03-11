@@ -1,3 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Grupo C3 - Booking Chef</title>
+    <link rel="stylesheet" href="src/css/styles_index.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html">
+                <img src="/src/img/flatIcon.png" alt="Logo C3">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="src/nosotros.html">Nosotros</a>
+            <a href="src/proyecto.html">Proyectos</a>
+            <a href="src/contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Booking Chef</h1>
+                <h2>Grupo C3</h2>
+                <h4>Tiziano Lopez, Aleix Falgosa, Aoife y Chaofan Li</h4>
+            </div>
+            <div class="hero-image"></div>
+        </section>
+
+        <div class="rotating-text-container">
+            <div class="rotating-text-wrapper">
+                <h2 class="rotating-text">
+                    Mejora la
+                </h2>
+                <h2 class="rotating-text">
+                    <div class="words-wrapper">
+                        <div class="words">
+                            <span>experiencia</span>
+                            <span>gestión</span>
+                            <span>eficiencia</span>
+                        </div>
+                    </div>
+                </h2>
+                <h2 class="rotating-text">de tu restaurante</h2>
+            </div>
+            
+            <div class="description-wrapper">
+                <h3>Solución innovadora para la <span>reserva y organización</span> de mesas. <span>Simplificamos</span> la experiencia tanto para clientes como para propietarios.</h3>
+            </div>
+        </div>
+
+        <section class="floor-plan-section">
+
+            <div class="floor-plan">
+                <div class="table-container">
+                    <!-- Mesa principal (About Us) - Rectangular -->
+                    <a href="src/nosotros.html" class="table large-table">
+                        <div class="chairs chairs-horizontal"></div>
+                        <div class="table-top">
+                            <span>Conócenos</span>
+                        </div>
+                    </a>
+
+                    <div class="side-tables-container">
+                        <!-- Mesa izquierda (Projects) - Romboide -->
+                        <a href="src/projects.html" class="table diamond-table">
+                            <div class="chairs chairs-diamond"></div>
+                            <div class="table-top">
+                                <span>Proyectos</span>
+                            </div>
+                        </a>
+
+                        <!-- Mesa derecha (Contact) - Circular -->
+                        <a href="src/contacto.html" class="table circular-table">
+                            <div class="chairs chairs-circle"></div>
+                            <div class="table-top">
+                                <span>Contáctanos</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="src/js/navbar.js"></script>
+</body>
 </html>

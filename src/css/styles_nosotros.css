@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Work Sans", sans-serif;
 }
 
 body {
@@ -69,6 +69,11 @@ body {
 
 .nav-links a:hover::after {
     width: 70%;
+    background-color: #FF8500;
+}
+.nav-links a:hover {
+    color: #FF8500;
+
 }
 
 /* Marca la página actual */
@@ -111,6 +116,8 @@ body {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: 500;
+
 }
 
 .images-container {
@@ -200,12 +207,13 @@ body {
 .section-content h3 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .section-content p {
-    font-size: 1.2rem;
     line-height: 1.6;
     max-width: 800px;
+    font-weight: 300
 }
 
 .member {

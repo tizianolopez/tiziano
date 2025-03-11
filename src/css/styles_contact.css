@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Work Sans", sans-serif;
     background-color: #121212;
 
 }
@@ -66,6 +66,11 @@ body {
 
 .nav-links a:hover::after {
     width: 70%;
+    background-color: #FF8500;
+}
+.nav-links a:hover {
+    color: #FF8500;
+
 }
 
 /* Marca la página actual */
@@ -101,13 +106,16 @@ body {
     position: relative;
     overflow: hidden;
 }
+.hero span{
+    color: #FF8500;
+}
 
 .hero h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
     margin-bottom: 4rem;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     position: relative;
     z-index: 2;
 }
@@ -131,8 +139,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 111vh;
     background: rgba(0, 0, 0, 0.712);
     z-index: 1;
 }
@@ -207,13 +215,14 @@ footer {
 
 .form:hover {
     transform: translate3d(0, -0.3em, 0);
-    box-shadow: 10px 10px 25px -15px rgba(255,255,255,1);
+    box-shadow: 10px 10px 25px -15px #ffffff;
 }
 
 .form h2 {
     font-size: 3em;
     margin-top: 0.1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 400;
 }
 
 .form-group {
@@ -247,7 +256,8 @@ footer {
 }
 
 button {
-    background-color: #0d6efd;
+    font-family: "Work Sans", sans-serif;
+    background-color: #d36d00;
     color: white;
     padding: 0.5em 1em;
     border: none;
@@ -257,12 +267,12 @@ button {
 }
 
 button:hover {
-    background-color: #0b5ed7;
+    background-color: #FF8500;
 }
 
 /* Estilos de redes sociales */
 .social-container {
-    flex: 0 1 140px;
+    flex: 0 1 135px;
 }
 
 .contact-tel {
@@ -279,6 +289,7 @@ button:hover {
 
 .contact-tel h3 {
     margin: 0.2em 0 0.5em 0;
+    font-weight: 400;
 }
 
 h4 {
@@ -302,8 +313,8 @@ h4 {
 }
 
 .social-links a:hover {
-    fill: #FC3C8F;
-    color: #FC3C8F;
+    fill: #FF8500;
+    color: #FF8500;
     transition: all 220ms;
 }
 .social-links p {
