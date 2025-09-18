@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <title>Tiziano López </title>
+    <link rel="stylesheet" href="src/css/styles_nosotros.css">
+    <link rel="icon" href="src/img/TL.png" type="image/png"> 
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="#about">Sobre Mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
+        </div>
+    </nav>
+
+    
+    <div class="parallax-container">
+        <div class="title">
+        <h1>Tiziano Lopez Alonso</h1>
+        <h2>Ingeniero Informático | Creativo Digital</h2>
+        <h4>Soluciones que conectan tecnología y personas</h4>
+    </div>
+        <div class="images-container">
+            <div class="image left" id="img1"></div>
+            <div class="right-images">
+                <div class="image right" id="img2"></div>
+                <div class="image right" id="img3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">          
+        <section class="team-members">
+    
+            <article class="member" id="about">
+                <div class="sticky-image" style="background-image: url('src/img/tizianoFondo.jpeg')"></div>
+                <div class="content-wrapper">
+                    <div class="section-content">
+                        <h3>¡Me presento!</h3>
+                        <p>Soy Tiziano, nací en <span id="arg">Argentina</span>, y estudio de Ingeniería Informática en la Universitat de Barcelona. <br>
+                         Me dedico a diseñar y construir experiencias digitales útiles. Combino rigor técnico y sentido de diseño para resolver problemas y entregar productos prácticos y escalables.</p>
+            <br><p><strong>Stack:</strong> Java · Python · C/C++ · JavaScript · HTML/CSS · Node.js · Vue · JSON · Android Studio · MySQL · OpenGL · Git/Github · Bash scripting ·</p>
+            </div>
+                </div>
+            </article>
+
+
+            <article class="member" id="projects">
+                <div class="sticky-image" style="background-image: url('src/img/proyectos.svg')"></div>
+                <div class="content-wrapper left-align">
+                    <div class="section-content">
+                        <h3>Mis proyectos</h3>
+                        <p>Un vistazo a algunos de mis proyectos extracurriculares que más me identifican <p>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="member">
+                <div class="sticky-image" style="background-image: url('src/img/qrpararest.png')"></div>
+                <div class="content-wrapper">
+                    <div class="section-content">
+                        <h3>QR para Restaurantes</h3>
+                        <p>Desarrollé una plataforma que permite a restaurantes digitalizar sus menús y generar códigos QR personalizados. El sistema incluye gestión de usuarios, base de datos segura y comunicación en tiempo real entre clientes y personal. Esta solución permite a los dueños publicar sus menús y usar codigos QR únicos para cada menú. <br> 
+                        Tecnologías: HTML, CSS, JavaScript, Firebase</p></div>    
+                    </div>
+                </div>
+            </article>
+
+            <article class="member">
+                <div class="sticky-image" style="background-image: url('src/img/fulbol.svg')"></div>
+                <div class="content-wrapper">
+                    <div class="section-content">
+                        <h3>Fútbol Daily: Minijuegos web diarios</h3>
+                        <p>Creé una colección de minijuegos diarios de fútbol, incluyendo retos tipo Wordle, crucigramas y juegos originales. Cada juego está diseñado para ser intuitivo y entretenido, con contenido que cambia automáticamente cada día. <br> Para la base de datos descargué datasets de Kaggle, los limpié y transformé con scripts para generar JSON que alimenta los juegos.<br> 
+                        Tecnologías: HTML, CSS, JavaScript, Bash Scripting, JSON</p></div>                        </div>
+                </div>
+            </article>
+
+            <article class="member">
+                <div class="sticky-image" style="background-image: url('src/img/allganize.png')"></div>
+                <div class="content-wrapper">
+                    <div class="section-content">
+                        <h3>Allganize: Organización inteligente para estudiantes</h3>
+                        <p>Allganize nace para agrupar en una sola interfaz las herramientas que un estudiante usa a diario: calendario, tableros Kanban, temporizador Pomodoro y notas para ideas y apuntes. La app prioriza usabilidad y rendimiento: funciona totalmente en el navegador, guardando datos localmente<br> 
+                        Tecnologías: HTML, CSS, JavaScript, LocalStorage, Drag & Drop API, Web APIs</p></div>                        </div>
+                </div>
+            </article>
+        </section>
+        <article class="member">
+                        <div class="sticky-image" style="background-image: url('src/img/pattern.png')"></div>
+                        <div class="content-wrapper">
+                            <div class="section-content"></div>                        </div>
+                        </div>
+                    </article>
+                </section>
+          <!-- Footer HTML -->
+<footer id="contact">
+    <div class="vertical-alignment">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Formulario -->
+                <div class="form-container">
+                    <h3 id="fotter-tittle">Pongamonos en contacto</h3>
+
+                    <div class="form">
+                        <h2>Contáctame</h2>
+                        <form action="https://formspree.io/f/xqadvnwg" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" id="name" placeholder="Pedro Picapiedra" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" name="email" id="email" placeholder="nombre@ejemplo.com" required>
+                                <div class="form-text">No compartiré su correo con nadie.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea name="message" id="message" rows="3" placeholder="Escriba su mensaje" required></textarea>
+                            </div>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="src/js/parallax.js"></script>
+    <script src="src/js/content_scroll.js"></script>
+    <script src="src/js/navbar.js"></script>
+</body>
+</html>
