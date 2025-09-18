@@ -7,10 +7,12 @@
 
 body {
     overflow-x: hidden;
-    background-color: #121212;
+    background-color: #000000;
     color: white;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -69,10 +71,10 @@ body {
 
 .nav-links a:hover::after {
     width: 70%;
-    background-color: #FF8500;
+    background-color: #60df9a;
 }
 .nav-links a:hover {
-    color: #FF8500;
+    color: #60df9a;
 
 }
 
@@ -84,6 +86,18 @@ body {
 .nav-links a.active::after {
     width: 70%;
 }
+
+.left-align {
+    justify-content: flex-start !important;
+}
+
+.left-align .section-content {
+    width: 40%;
+    max-width: 600px;
+    padding: 2rem 2rem 2rem 4rem;
+    text-align: left;
+}
+
 
 @media (max-width: 768px) {
     .navbar {
@@ -111,13 +125,42 @@ body {
 
 .title {
     position: fixed;
-    font-size: 5rem;
-    z-index: 10;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 800px;
     text-align: center;
+    z-index: 10;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    font-weight: 500;
+    padding: 2rem 1rem;
+    font-family: "Work Sans", sans-serif;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
 
+.title h1 {
+    font-size: clamp(2em, 5vw, 5rem);
+    color: white;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+}
+
+.title h2 {
+    font-size: clamp(1.5em, 1.5vw, 2rem);
+    color: #60df9a;
+    margin-bottom: 0.3em;
+    font-weight: 500;
+}
+
+.title h4 {
+    font-size: clamp(1rem, 0.5vw, 1.2rem);
+    font-style: italic;
+    color: #c2ffdd;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+    font-weight: 300;
 }
 
 .images-container {
@@ -130,35 +173,50 @@ body {
 }
 
 .image {
-    width: 25vw; /* Responsive width based on viewport width */
-    height: 100vh; /* Height will adjust to maintain aspect ratio */
-    background-size: cover; /* Ensures image is fully visible */
+    width: 20vw; /* Responsive width based on viewport width */
+    height: 40vh;
+    background-size: contain; /* Ensures image is fully visible */
     opacity: 0.9;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 10px;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
+/* ...existing code... */
 
+/* Override: ocultar img2/img3 al inicio y ajustar su estado inicial */
+#img2, #img3 {
+    opacity: 0; /* ocultas al inicio */
+    transform: scale(0.05) translateY(20px); /* muy pequeñas al inicio */
+    filter: blur(12px) brightness(0.6);
+    will-change: transform, opacity, filter;
+    transition: transform 0.6s cubic-bezier(.2,.8,.2,1), opacity 0.6s ease, filter 0.6s ease;
+}
+
+/* ...existing code... */
 .left {
-    background-image: url('../img/aleix.JPG');
+    background-image: url('../img/tiziano3.jpg');
+    align-self: flex-end; /* Posiciona la imagen abajo del contenedor flex */
+    height: 60vh;
+
 }
 
 .right-images {
-
+    align-self: flex-end;
     display: flex;
     flex-direction: column;
-    gap: 3em;
-    margin-right: 2rem;
+    height: fit-content;
+    gap: 0em;
+    margin-right: 9em;
 }
 
 #img2 {
-    background-image: url('../img/aoife.JPG');
+    background-image: url('../img/hola2.svg');
     transform: translateX(-2vw); /* Responsive offset */
 }
 
 #img3 {
-    background-image: url('../img/tiziano.JPG');
+    background-image: url('../img/tiziano2.jpg');
     transform: translateX(2vw); /* Responsive offset */
 }
 
@@ -167,7 +225,7 @@ body {
 .content {
     position: relative;
     width: 100%;
-    margin-top: 400vh;
+    margin-top: 800vh;
     visibility: visible; /* Changed from hidden to visible */
 }
 
@@ -183,6 +241,16 @@ body {
     transition: transform 0.3s ease-out, 
                 filter 0.5s ease-out;
 }
+
+#arg{
+    background: rgb(0, 164, 255);
+    background: -moz-linear-gradient(90deg, rgba(0,164,255,1) 33%, rgba(255,218,0,1) 50%, rgba(0,164,255,1) 60%);
+    background: -webkit-linear-gradient(90deg, rgba(0, 164, 255, 1) 33%, rgba(255, 218, 0, 1) 50%, rgba(0, 164, 255, 1) 60%);
+    background: linear-gradient(90deg, rgba(0, 164, 255, 1) 33%, rgba(255, 218, 0, 1) 50%, rgba(0, 164, 255, 1) 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00a4ff",endColorstr="#00a4ff",GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+
 .content-wrapper {
     min-height: 100vh;
     display: flex;
@@ -221,4 +289,206 @@ body {
     position: relative;
     margin-bottom: 5rem;
     overflow: hidden;
+}
+
+
+footer {
+    position: relative;
+    z-index: 2;
+    background-color: #121212;
+}
+
+#fotter-tittle{
+        font-size: 2.5rem;
+    margin-bottom: 5rem;
+    font-weight: 400;
+    color: white;
+}
+.form-container #fotter-tittle,
+#fotter-tittle {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+footer {
+    width: 100%;
+    height: 60em;
+    background: none;  
+    color: #121212;  
+}
+
+.vertical-alignment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+/* Estilos del formulario */
+.form-container {
+    flex: 0 1 80%; /* Takes 60% of the space */
+    min-width: 300px;
+    max-width: 800px;
+}
+
+/* Container for all social links */
+.social-links-wrapper {
+    flex: 0 1 30%; /* Takes 35% of the space */
+    display: flex;
+    flex-direction: column;
+}
+
+.social-container {
+    width: 100%;
+}
+
+.contact-tel {
+    background-color: #dfdfdf;
+    padding: 2em;
+    border-radius: 0.5em;
+    transition: 0.25s ease-out;
+}
+
+
+.form {
+    background-color: #eaeef3;
+    border-radius: 0.5em;
+    padding: 2em;
+    transition: 0.2s ease-out;
+}
+
+.form:hover, .contact-tel:hover {
+    transform: translate3d(0, -0.3em, 0);
+    box-shadow: 10px 10px 25px -15px #039042;
+}
+
+.form h2 {
+    font-size: 3em;
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    height: 8em;
+    max-height: 200px;
+    resize: vertical;
+}
+
+.form-text {
+    font-size: 0.875em;
+    color: #6c757d;
+    margin-top: 0.25em;
+}
+
+button {
+    font-family: "Work Sans", sans-serif;
+    background-color: #039042;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #60df9a;
+}
+
+/* Estilos de redes sociales */
+.social-container {
+    flex: 0 1 135px;
+}
+
+.contact-tel {
+    background-color: #dfdfdf;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    transition: 0.25s ease-out;
+}
+
+
+
+.contact-tel h3 {
+    margin: 0.2em 0 0.5em 0;
+    font-weight: 400;
+}
+
+h4 {
+    margin: 1em 0em 0.5em 0em;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    padding: 0.5em;
+    transition: all 220ms;
+}
+
+.social-links a:hover {
+    fill: #60df9a;
+    color: #60df9a;
+    transition: all 220ms;
+}
+.social-links p {
+    margin: 0;
+}
+
+.icon {
+    width: 1.5em;
+    margin-right: 0.5em;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .form-container,
+    .social-container {
+        width: 100%;
+        max-width: 100%;
+    }
 }
